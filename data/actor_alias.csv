@@ -1,0 +1,63 @@
+﻿actor_id,source,alias
+1,Crowdstrike,FANCY BEAR
+1,Mandiant,APT 28
+1,Kapersky,Sofacy Group
+1,iSight,Tsar Team
+1,Thales,ATK5
+1,PwC,Blue Athena
+1,Palo Alto,Fighting Ursa
+1,Microsoft,Forest Blizzard
+1,Google,FROZEN LAKE
+1,Talos,Group 74
+1,Trend Micro,PawnStorm
+2,Trend Micro,Sandworm 
+2,Trend Micro,Sandworm Team
+2,Crowdstrike,VOODOO BEAR
+2,Thales,ATK14
+2,PwC,BlackEnergy Group
+2,Dragos,ELECTRUM
+2,Google,FROZENBARENTS
+2,Kapersky,Hades
+2,Kapersky,OlympicDestroyer
+2,Microsoft,Seashell Blizzard
+2,Mandiant ,TEMP.NOBLE
+3,Mandiant ,APT 29
+3,Thales,ATK7
+3,PwC,Blue Kitsune
+3,Crowdstrike,COZY BEAR
+3,Mandiant ,UNC2452
+3,Microsoft,YTTRIUM
+4,Crowdstrike,GOSSAMER BEAR
+4,PwC,Blue Callisto
+4,Google,COLDRIVER
+4,Microsoft,SEABORGIUM
+4,Microsoft,Star Blizzard
+4,Proofpoint,TA446
+5,Crowdstrike,CHARMING KITTEN
+5,Mandiant,APT 35
+5,Mandiant,APT 42
+5,IBM,ITG18
+5,Palo Alto,Magic Hound
+5,Microsoft,Mint Sandstorm sub-group
+5,Kapersky,NewsBeef
+5,Microsoft,PHOSPHORUS sub-group
+5,Proofpoint,TA453
+5,Mandiant,UNC788
+5,Pwc,Yellow Garuda
+6,Crowdstrike,IMPERIAL KITTEN
+6,Microsoft,Crimson Sandstorm
+6,Microsoft,CURIUM
+6,Microsoft,DEV-0228
+6,IBM,HIVE0095
+6,Proofpoint,TA456
+6,Cisco Talos,Tortoiseshell
+6,Mandiant,UNC3890
+6,PwC,Yellow Liderc
+7,Crowdstrike,WICKED PANDA 
+7,Mandiant,APT 41
+7,Microsoft,BARIUM
+7,Symantec,Blackfly
+7,Talos,Group 72
+7,PwC,Red Kelpie
+8,Crowdstrike,VANGUARD PANDA
+8,Microsoft,Volt Typhoon
