@@ -34,3 +34,5 @@ def Actors_From_CSVs(actor_csv_path:str, alias_csv_path:str) -> list[Actor]:
         print("ERROR: There was an error creating the actors from the CSVs.")
         print(e)
         return []
+    
+    

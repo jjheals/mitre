@@ -1,3 +1,8 @@
+import pandas as pd
+from enum import Enum 
+
+# -------------------------------------------------------------------------- #
+# CLASSES FOR DATABASE OBJECTS
 
 class Actor: 
     
@@ -17,7 +22,7 @@ class Actor:
         self.aliases = {}
     
     
-    ''' toString -> str - Return this Actor as a meaningful string 
+    ''' toString() -> str - Return this Actor as a meaningful string 
         :return str representation of this actor
     '''
     def toString(self) -> str: 
@@ -26,15 +31,53 @@ class Actor:
         for k in self.aliases.keys(): s += f"\n\t\t{k} - {self.aliases[k]}"
         return s
     
+# -------------------------------------------------------------------------- #
+# CLASSES FOR MITRE ATT&CK FRAMEWORK
 
+import mitreattack.attackToExcel.attackToExcel as attackToExcel
+import mitreattack.attackToExcel.stixToDf as stixToDf
 
-
+class MitreDomains:
+    ICS = "ics-attack"
+    ENTERPRISE = "enterprise-attack"
+    MOBILE = "mobile-attack"
+    
+class Mitre:
+    
+    domain:str 
+    attack_data:object
+    attack_dfs_dict:dict
+    tactics_df:pd.DataFrame
+    techniques_df:pd.DataFrame
+    
+    def __init__(self, domain:str): 
+        self.domain = domain
+        try: self.attack_data = attackToExcel.get_stix_data(domain)
+        except: 
+            print("Error in Mitre: Invalid domain. Exiting.")
+            return 
+        
+        self.attack_dfs_dict = attackToExcel.build_dataframes(self.attack_data, domain)
+        self.tactics_df = self.attack_dfs_dict['tactics']['tactics']
+        self.techniques_df = self.attack_dfs_dict['techniques']['techniques']
+        
+    def getAllTactics() -> pd.DataFrame: 
+        pass
+        
 class Tactic: 
     
-    pass
+    tactic_id:int
+    tactic_name:str
+    
+    def __init__(self, id:int, name:str):
+        self.tactic_id = id
+        self.tactic_name = name
 
-
-
+    ''' toString -> str - Return this tactic as a meaningful string 
+        :return str representation of this tactic
+    '''
+    def toString(self) -> str: return f"TACTIC (id: {self.tactic_id}, name: {self.tactic_name})"
+             
 class Technique: 
     
     class SubTechnique:
